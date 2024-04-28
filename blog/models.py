@@ -13,10 +13,9 @@ class Category(models.Model):
         verbose_name = "Категория"
         verbose_name_plural = "Категории"
 
-    def save(self):
-        if not self.slug:
-            self.slug = slugify(self.slug)
-            super().save()
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.slug)
+        super().save()
 
     
 class Posts(models.Model):
@@ -36,10 +35,10 @@ class Posts(models.Model):
         verbose_name = "Пост/Новость"
         verbose_name_plural = "Посты/Новости"
 
-    def save(self):
-        if not self.slug:                       
+    def save(self, *args, **kwargs):
+        if not self.slug:
             self.slug = slugify(self.slug)
-            super().save()
+            super().save(*args, **kwargs)
 
     
 class Comments(models.Model):
