@@ -58,8 +58,8 @@ class Comments(models.Model):
 
     
 class UserProfile(models.Model):
-    last_name = models.CharField(verbose_name="Имя", max_length=50)
-    first_name =models.CharField(verbose_name="Фамилия", max_length=50)
+    last_name = models.CharField(verbose_name="Фамилия", max_length=50)
+    first_name =models.CharField(verbose_name="Имя", max_length=50)
     birth_date = models.DateField(verbose_name="Дата рождения", null=True, blank=True)
     city = models.CharField(verbose_name="Город", max_length=50)
     e_mail = models.CharField(verbose_name="Электронная почта", max_length=255)
