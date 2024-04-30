@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block categories %}
+<h1>Категории которые вы найдёте на нашем сайте</h1>
+    <div>
+        {% for i in categories %}
+            <hr>
+            <h2>{{ i.title }}</h2>
+        {% endfor %}
+    </div>
+    {% endblock categories %}
