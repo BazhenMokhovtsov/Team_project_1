@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %} {{post.slug}} {% endblock title %} {{post.slug}} 
+
+{% block content %}
+
+
+    <div>
+        <h1>{{post.title}}</h1>
+        <br>
+        <div>
+            <p>{{post.text}}/<p>
+        </div>
+        <br>
+        <a><i>Новость опубликовал пользователь: {{post.author}}. Дата публикации {{post.update_date}}  </i></a>
+    </div>
+
+{% endblock content %}
