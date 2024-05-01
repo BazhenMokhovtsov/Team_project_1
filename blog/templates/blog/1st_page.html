@@ -11,7 +11,7 @@
     <div>
         {% for i in categories %}
                 <hr>
-                <h2>{{ i.title }}</h2>
+                <a href="{% url "blog:show_posts_to_category" i.id %} "><h2>{{ i.title }}</h2></a>
             {% endfor %}
             <hr>
         </div>

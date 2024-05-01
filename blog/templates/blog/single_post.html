@@ -1,18 +1,36 @@
 {% extends "base.html" %}
 
-{% block title %} {{post.slug}} {% endblock title %} {{post.slug}} 
+{% block title %} {{single_post.slug}} {% endblock title %} 
 
 {% block content %}
 
 
     <div>
-        <h1>{{post.title}}</h1>
+        <h1>{{single_post.title}}</h1>
         <br>
         <div>
-            <p>{{post.text}}/<p>
+            <p>{{single_post.text}}/<p>
         </div>
         <br>
-        <a><i>Новость опубликовал пользователь: {{post.author}}. Дата публикации {{post.update_date}}  </i></a>
+        <a><i> Новость опубликовал пользователь: {{single_post.author}}. Дата публикации {{single_post.update_date}}  </i></a>
     </div>
 
+    <div>
+        <form method="POST" class="post-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-success ">Save</button>
+        </form>
+    </div>
+    
+    <div>
+        {% for comment in comments %}
+        <hr>
+        <td>
+            <p> {{comment.text}} </p>
+            <button class="btn btn-danger custom-btn btn-sm" onclick= "location.href='{% url 'blog:del_comment' comment.id %}'">Удалить комментарий</button></td>  
+            <br>
+            <a><i> Коментарий добавил пользователь: {{comment.author}}. Дата публикации {{comment.created_date}}  </i></a>
+        {% endfor %}
+    </div>
 {% endblock content %}

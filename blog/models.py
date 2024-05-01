@@ -53,7 +53,7 @@ class Comments(models.Model):
     created_date = models.DateTimeField(verbose_name="Дата добавления коментария", auto_now_add=True)
 
     def __str__(self):
-        return self.author
+        return self.author.username
     
     class Meta:
          verbose_name = "Коментарий"
