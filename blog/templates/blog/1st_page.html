@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% for i in categories %}
+    {% block title %} Категории {% endblock title %}
+{% endfor %}
+
+{% block content %}
+    <h1>Категории которые вы найдёте на нашем сайте</h1>
+    <br>
+    <br>
+    <div>
+        {% for i in categories %}
+                <hr>
+                <a href="{% url "blog:show_posts_to_category" i.id %} "><h2>{{ i.title }}</h2></a>
+            {% endfor %}
+            <hr>
+        </div>
+{% endblock content %}
