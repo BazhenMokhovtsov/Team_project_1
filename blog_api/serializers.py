@@ -1,3 +1,5 @@
+import datetime
+
 from rest_framework import serializers
 from pytils.translit import slugify
 
@@ -25,6 +27,7 @@ class CategorySerializer(serializers.HyperlinkedModelSerializer):
 class PostSerializer(serializers.ModelSerializer):
     slug = serializers.SlugField(allow_null=True, required=False)
     image = serializers.ImageField(allow_null=True, required=False)
+
     class Meta:
         model = Posts
         fields = ['pk', 'author', 'category', 'title', 'text', 'update_date', 'published',
@@ -32,6 +35,7 @@ class PostSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         validated_data['slug'] = slugify(validated_data['title'])
+        validated_data['update_date'] = datetime.datetime.utcnow()
         return Posts.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
@@ -39,8 +43,9 @@ class PostSerializer(serializers.ModelSerializer):
         instance.category = validated_data.get('category', instance.title)
         instance.title = validated_data.get('title', instance.title)
         instance.text = validated_data.get('text', instance.title)
-        instance.update_date = validated_data.get('update_date', instance.title)
+        instance.update_date = datetime.datetime.utcnow()
         instance.published = validated_data.get('published', instance.title)
         instance.image = validated_data.get('image', instance.title)
         instance.title = slugify(instance.title)
+        instance.save()
         return instance

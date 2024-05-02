@@ -24,15 +24,19 @@ class CategoryCreate(generics.ListCreateAPIView):
     permission_classes = [IsAdminUser]
 
 
-class PostList(views.APIView):
+class PostAPIList(generics.ListAPIView):
+    queryset = Posts.objects.all()
+    serializer_class = PostSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
-    def get(self, request):
-        queryset = Posts.objects.all()
-        serializer = PostSerializer(queryset, many=True).data
-        return Response({'post_list': serializer})
 
-    def post(self, request):
-        serializer = PostSerializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+class PostAPIDetail(generics.RetrieveAPIView):
+    queryset = Posts.objects.all()
+    serializer_class = PostSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+
+class PostAPICreate(generics.ListCreateAPIView):
+    queryset = Posts.objects.all()
+    serializer_class = PostSerializer
+    permission_classes = [IsAdminUser]
