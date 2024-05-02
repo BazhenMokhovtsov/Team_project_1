@@ -20,3 +20,27 @@ class CategorySerializer(serializers.HyperlinkedModelSerializer):
         instance.slug = slugify(instance.title)
         instance.save()
         return instance
+
+
+class PostSerializer(serializers.ModelSerializer):
+    slug = serializers.SlugField(allow_null=True, required=False)
+    image = serializers.ImageField(allow_null=True, required=False)
+    class Meta:
+        model = Posts
+        fields = ['pk', 'author', 'category', 'title', 'text', 'update_date', 'published',
+                  'image', 'slug']
+
+    def create(self, validated_data):
+        validated_data['slug'] = slugify(validated_data['title'])
+        return Posts.objects.create(**validated_data)
+
+    def update(self, instance, validated_data):
+        instance.author = validated_data.get('author', instance.title)
+        instance.category = validated_data.get('category', instance.title)
+        instance.title = validated_data.get('title', instance.title)
+        instance.text = validated_data.get('text', instance.title)
+        instance.update_date = validated_data.get('update_date', instance.title)
+        instance.published = validated_data.get('published', instance.title)
+        instance.image = validated_data.get('image', instance.title)
+        instance.title = slugify(instance.title)
+        return instance
