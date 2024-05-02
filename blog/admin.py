@@ -21,9 +21,4 @@ class CommentsAdmin(admin.ModelAdmin):
     list_display = ['author', 'post']
     list_filter = ['created_date']
     search_fields = ['post']
- 
 
-@admin.register(UserProfile)
-class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ['first_name', 'last_name']
-    list_filter = ['city']
