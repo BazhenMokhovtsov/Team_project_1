@@ -2,12 +2,13 @@ from django.db import models
 from pytils.translit import slugify
 from django.contrib.auth.models import User
 
+
 class Category(models.Model):
     title = models.CharField(verbose_name='Заголовок', max_length=255)
     slug = models.SlugField(verbose_name='Слаг')
 
     def __str__(self):
-            return self.title
+        return self.title
     
     class Meta:
         verbose_name = "Категория"
@@ -31,12 +32,11 @@ class Posts(models.Model):
     slug = models.SlugField(verbose_name='Слаг')
 
     def __str__(self):
-            return self.title
+        return self.title
     
     class Meta:
         verbose_name = "Пост/Новость"
         verbose_name_plural = "Посты/Новости"
-
 
     def save(self, *args, **kwargs):                
         self.summary = self.text[:200]
