@@ -19,7 +19,7 @@ class Category(models.Model):
         super().save()
 
     
-class Posts(models.Model):
+class Post(models.Model):
     text = models.TextField(verbose_name="Текст")
     summary = models.CharField(max_length=200, default="")
     title = models.CharField(verbose_name="Заголовок", max_length=255)
@@ -46,7 +46,7 @@ class Posts(models.Model):
     
 class Comments(models.Model):
     author = models.ForeignKey(User, verbose_name="Автор", on_delete=models.CASCADE)
-    post = models.ForeignKey(Posts, verbose_name="Пост/Новость", on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, verbose_name="Пост/Новость", on_delete=models.CASCADE)
     text = models.TextField(verbose_name="Текст")
     created_date = models.DateTimeField(verbose_name="Дата добавления коментария", auto_now_add=True)
 

@@ -3,7 +3,7 @@ import datetime
 from rest_framework import serializers
 from pytils.translit import slugify
 
-from blog.models import Category, Posts, Comments
+from blog.models import Category, Post, Comments
 
 
 class CategorySerializer(serializers.HyperlinkedModelSerializer):
@@ -29,14 +29,14 @@ class PostSerializer(serializers.ModelSerializer):
     image = serializers.ImageField(allow_null=True, required=False)
 
     class Meta:
-        model = Posts
+        model = Post
         fields = ['pk', 'author', 'category', 'title', 'text', 'update_date', 'published',
                   'image', 'slug']
 
     def create(self, validated_data):
         validated_data['slug'] = slugify(validated_data['title'])
         validated_data['update_date'] = datetime.datetime.utcnow()
-        return Posts.objects.create(**validated_data)
+        return Post.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
         instance.author = validated_data.get('author', instance.title)

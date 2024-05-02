@@ -1,14 +1,15 @@
 from django.contrib import admin
 from .models import *
 
+
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['title']
     prepopulated_fields = {'slug': ('title',)}
 
 
-@admin.register(Posts)
-class PostsAdmin(admin.ModelAdmin):
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
     list_display = ['title', 'author']
     list_filter = ['update_date']
     search_fields = ['category']

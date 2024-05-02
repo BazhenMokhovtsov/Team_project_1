@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Category, Posts, Comments
+from .models import Category, Post, Comments
 from .forms import CommentForm
 
 def index(reques):
@@ -20,7 +20,7 @@ def show_all_categories(request):
 
 def show_posts_to_category(request, category_id):
     
-    posts = Posts.objects.filter(category__id=category_id)
+    posts = Post.objects.filter(category__id=category_id)
 
     content = {
 
@@ -32,7 +32,7 @@ def show_posts_to_category(request, category_id):
 
 
 def show_single_post(request, post_id):
-    single_post = Posts.objects.get(pk=post_id)
+    single_post = Post.objects.get(pk=post_id)
     comments = Comments.objects.filter(post__id=post_id)
 
     if request.method == "POST":
