@@ -3,9 +3,6 @@ from django.http import HttpResponse
 from .models import Category, Posts, Comments
 from .forms import CommentForm
 
-def index(reques):
-    return HttpResponse ("hallo")
-
 
 def show_all_categories(request):
     categories = Category.objects.all()
