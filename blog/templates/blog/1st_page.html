@@ -5,14 +5,16 @@
 {% endfor %}
 
 {% block content %}
-    <h1>Категории которые вы найдёте на нашем сайте</h1>
+    <h1>Новости которые вы найдёте на нашем сайте</h1>
     <br>
     <br>
-    <div>
-        {% for i in categories %}
-                <hr>
-                <a href="{% url "blog:show_posts_to_category" i.id %} "><h2>{{ i.title }}</h2></a>
-            {% endfor %}
+        <div>
+            {% for post in posts %}
+                    <hr>
+                    <a href="{% url 'blog:show_single_post' post.pk %}"><h3> {{post.title}}</h3></a>
+                        <br>
+                    <p> {{post.summary}}...</p>                      
+            {% endfor %}    
             <hr>
         </div>
 {% endblock content %}

@@ -12,6 +12,7 @@ class Category(models.Model):
     class Meta:
         verbose_name = "Категория"
         verbose_name_plural = "Категории"
+        
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
@@ -20,7 +21,7 @@ class Category(models.Model):
     
 class Posts(models.Model):
     text = models.TextField(verbose_name="Текст")
-    summary = models.CharField(max_length=200, default="")
+    summary = models.CharField(max_length=200, blank=True)
     title = models.CharField(verbose_name="Заголовок", max_length=255)
     author = models.ForeignKey(User, verbose_name="Автор", on_delete=models.CASCADE, default=User)
     update_date = models.DateTimeField(verbose_name="Дата обновления", auto_now=True)
@@ -36,6 +37,8 @@ class Posts(models.Model):
     class Meta:
         verbose_name = "Пост/Новость"
         verbose_name_plural = "Посты/Новости"
+        ordering = ['-update_date']
+        indexes = [ models.Index(fields=['update_date'])]
 
 
     def save(self, *args, **kwargs):                

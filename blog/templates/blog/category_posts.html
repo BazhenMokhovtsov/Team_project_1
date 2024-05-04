@@ -6,14 +6,33 @@
 
 
 {% block content %}
-    <div>
-        {% for post in posts %}
-            <hr>
-            <a href="{% url 'blog:show_single_post' post.pk %}"><h2>{{ post.title }}</h2></a>
-            <h4>{{post.summary}}...</h4>
-            <a>Новость опубликовал пользователь: {{post.author}}. Дата публикации {{post.update_date}}  </a>
-        {% endfor %}
-    </div> 
+<div> 
+    {% for item in page_obj %}
+        <hr>
+            <a href="{% url 'blog:show_single_post' item.pk %}"><h2>{{ item.title }}</h2></a>
+            <h4>{{item.summary}}...</h4>
+            <a><i>Новость опубликовал пользователь: {{item.author}}. Дата публикации {{item.update_date}}</i></a>
+    {% endfor %}
+</div>   
+<!-- Элементы навигации пагинации -->
+<div class="pagination">
+    <span class="step-links">
+        <br>
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; первая</a>
+            <a href="?page={{ page_obj.previous_page_number }}">предыдущая</a>
+        {% endif %}
+
+        <span class="current">
+            Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">следующая</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">последняя &raquo;</a>
+        {% endif %}
+    </span>
+</div>
 {% endblock content %}
 
 
