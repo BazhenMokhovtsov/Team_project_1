@@ -25,8 +25,7 @@ class CategorySerializer(serializers.HyperlinkedModelSerializer):
 
 
 class PostSerializer(serializers.ModelSerializer):
-    slug = serializers.SlugField(allow_null=True, required=False)
-    image = serializers.ImageField(allow_null=True, required=False)
+    slug = serializers.SlugField(read_only=True, required=False)
 
     class Meta:
         model = Post

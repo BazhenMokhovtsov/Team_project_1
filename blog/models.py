@@ -28,7 +28,7 @@ class Post(models.Model):
     published = models.BooleanField(verbose_name="Публикация", default=False)
     category = models.ForeignKey(Category, verbose_name="Категории", on_delete=models.CASCADE)
     # Аплоуд ту пока не ясен для поля Изображения
-    image = models.ImageField(verbose_name="Изображения", upload_to='blog/%Y/%m/%d/', height_field=300, width_field=300, null=True, blank=True)
+    image = models.ImageField(verbose_name="Изображения", upload_to='blog/%Y/%m/%d/', null=True, blank=True)
     slug = models.SlugField(verbose_name='Слаг')
 
     def __str__(self):
