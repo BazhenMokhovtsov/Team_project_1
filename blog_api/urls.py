@@ -10,4 +10,6 @@ urlpatterns = [
     path('posts/<int:pk>/', PostAPIDetail.as_view(), name='post-detail'),
     path('posts/create/', PostAPICreate.as_view(), name='post-create'),
     path('posts/update/<int:pk>/', PostAPIUpdate.as_view(), name='post-update'),
+    path('comments/', CommentsAPIList.as_view(), name='comments-list'),
+    path('comments/delete/<int:pk>/', CommentsAPIDelete.as_view(), name='comments-delete'),
 ]

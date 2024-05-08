@@ -38,13 +38,24 @@ class PostSerializer(serializers.ModelSerializer):
         return Post.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
-        instance.author = validated_data.get('author', instance.title)
-        instance.category = validated_data.get('category', instance.title)
+        instance.author = validated_data.get('author', instance.author)
+        instance.category = validated_data.get('category', instance.category)
         instance.title = validated_data.get('title', instance.title)
-        instance.text = validated_data.get('text', instance.title)
+        instance.text = validated_data.get('text', instance.text)
         instance.update_date = datetime.datetime.utcnow()
-        instance.published = validated_data.get('published', instance.title)
-        instance.image = validated_data.get('image', instance.title)
-        instance.title = slugify(instance.title)
+        instance.published = validated_data.get('published', instance.published)
+        instance.image = validated_data.get('image', instance.image)
+        instance.slug = slugify(instance.title)
         instance.save()
         return instance
+
+
+class CommentsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comments
+        fields = ['author', 'post', 'text', 'created_date']
+        depth = 1
+
+    def create(self, validated_data):
+        return Comments.objects.create(**validated_data)
+
