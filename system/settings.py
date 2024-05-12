@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'blog_api',
+    'userprofile',
 
     'rest_framework',
     'rest_framework_simplejwt',
@@ -121,4 +122,6 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

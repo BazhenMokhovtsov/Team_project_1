@@ -61,18 +61,3 @@ class Comments(models.Model):
          verbose_name_plural = "Коментарии"
 
     
-# class UserProfile(models.Model):
-#     user = models.OneToOneField(User, verbose_name="Пользователь", on_delete=models.CASCADE)
-#     last_name = models.CharField(verbose_name="ФамилияИмя", max_length=50)
-#     first_name =models.CharField(verbose_name="", max_length=50)
-#     birth_date = models.DateField(verbose_name="Дата рождения", null=True, blank=True)
-#     city = models.CharField(verbose_name="Город", max_length=50)
-#     e_mail = models.CharField(verbose_name="Электронная почта", max_length=255)
-
-#     def __str__(self):
-#         return f'{self.first_name} {self.last_name}'
-    
-#     class Meta:
-#         verbose_name = "Профайл пользователя"
-#         verbose_name_plural = "Профайл пользователей"
-    

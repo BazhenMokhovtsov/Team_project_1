@@ -1,19 +1,52 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Category, Posts, Comments
-from .forms import CommentForm
+from .forms import CommentForm, SortPostForm
 from django.core.paginator import Paginator
 
 def show_all_categories(request):
     categories = Category.objects.all()
-    posts = Posts.objects.all()
+    
+
+    if request.method =='POST':
+        sort_form = SortPostForm(request.POST)
+        if sort_form.is_valid():
+            sort_by = sort_form.cleaned_data['sort_by']
+            if sort_by == 'title':
+                sorted_posts = Posts.objects.order_by('title')
+            elif sort_by == 'update_date':
+                sorted_posts = Posts.objects.order_by('update_date')
+            elif sort_by == 'category':
+                sorted_posts = Posts.objects.order_by('category_id')
+            else:
+                sorted_posts = Posts.objects.all()
+    
+            posts = sorted_posts # тут кроится ошибка. На этой строке должна быть сортировка.
+            paginator = Paginator(posts,2)
+            page_number = request.GET.get('page')
+            page_obj = paginator.get_page(page_number)
+        
+            content = {
+                'sort_form': sort_form,
+                'sorted_posts': sorted_posts,
+                'page_obj': page_obj,
+            }
+
+            return render(request, 'blog/1st_page.html', content)
+    else:
+        sort_form = SortPostForm()
+
+    posts = Posts.objects.all() # тут кроится ошибка. На этой строке должна быть сортировка.
+    paginator = Paginator(posts,2)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number) 
 
     content = {
-
-        'categories': categories,
-        'posts': posts,
-    }
-
+            'sort_form': sort_form,
+            'categories': categories,
+            'page_obj': page_obj,
+        }
+    
     return render(request, 'blog/1st_page.html', content)
 
 
