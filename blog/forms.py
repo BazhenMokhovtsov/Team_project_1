@@ -1,5 +1,5 @@
 from django import forms
-from .models import Comments, Posts
+from .models import Comments
 
 class CommentForm(forms.ModelForm):
 
@@ -11,10 +11,8 @@ class CommentForm(forms.ModelForm):
 class SortPostForm(forms.Form):
     sort_choices = [
         ('update_data','По дате обновления'),
-        ('title','По заголовку'),
         ('category', 'По категории')
     ]
 
     sort_by = forms.ChoiceField(choices=sort_choices, label='Сортировка по')
-
 

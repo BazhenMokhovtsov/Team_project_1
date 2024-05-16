@@ -1,4 +1,4 @@
 from blog import models
 
-def get_social_links(request):
+def get_categories(request):
     return {'categories': models.Category.objects.all()}

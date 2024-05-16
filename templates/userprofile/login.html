@@ -1,8 +1,8 @@
-{% extends "userprofile/profile.html" %}
+{% extends "base.html" %}
 
 {% block title %}Log-in{% endblock %}
 
-{% block login %}
+{% block content %}
         <h1>Log-in</h1>
         <p>Please, use the following form to log-in. If you don't have an account <a href="{% url "userprofile:register" %}">register here</a></p>
         <form action="." method="post">
@@ -10,4 +10,4 @@
             {% csrf_token %}
             <p><input type="submit" value="Log-in"></p>
         </form>
-{% endblock login %}
+{% endblock  %}

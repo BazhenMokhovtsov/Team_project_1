@@ -3,28 +3,33 @@ from django.http import HttpResponse
 from .models import Category, Posts, Comments
 from .forms import CommentForm, SortPostForm
 from django.core.paginator import Paginator
+from django.db.models import Q
+
+
+def paginator_page(request, queryset, pages):
+    paginator = Paginator(queryset,pages)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return page_obj
+    
 
 def show_all_categories(request):
-    categories = Category.objects.all()
-    
+    categories = Category.objects.all()  # 
+    #posts = Posts.objects.all() много лишних переменных. можно сделать все действия с одной переменной.
 
     if request.method =='POST':
         sort_form = SortPostForm(request.POST)
         if sort_form.is_valid():
             sort_by = sort_form.cleaned_data['sort_by']
-            if sort_by == 'title':
-                sorted_posts = Posts.objects.order_by('title')
-            elif sort_by == 'update_date':
+            if sort_by == 'update_date':
                 sorted_posts = Posts.objects.order_by('update_date')
             elif sort_by == 'category':
                 sorted_posts = Posts.objects.order_by('category_id')
             else:
-                sorted_posts = Posts.objects.all()
+                sorted_posts = Posts.objects.filter(published=True)
     
-            posts = sorted_posts # тут кроится ошибка. На этой строке должна быть сортировка.
-            paginator = Paginator(posts,2)
-            page_number = request.GET.get('page')
-            page_obj = paginator.get_page(page_number)
+            posts = sorted_posts # тут крылась ошибка. На этой строке должна быть сортировка.
+            page_obj = paginator_page(request,posts,2)
         
             content = {
                 'sort_form': sort_form,
@@ -36,10 +41,8 @@ def show_all_categories(request):
     else:
         sort_form = SortPostForm()
 
-    posts = Posts.objects.all() # тут кроится ошибка. На этой строке должна быть сортировка.
-    paginator = Paginator(posts,2)
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number) 
+    posts = Posts.objects.filter(published=True) 
+    page_obj = paginator_page(request,posts,2)
 
     content = {
             'sort_form': sort_form,
@@ -51,11 +54,9 @@ def show_all_categories(request):
 
 
 def show_posts_to_category(request, category_id): 
-    posts = Posts.objects.filter(category__id=category_id)
-    paginator = Paginator(posts,2)
+    posts = Posts.objects.filter(category__id=category_id, published=True)
 
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
+    page_obj = paginator_page(request,posts,2)
 
     content = {
 
@@ -77,7 +78,7 @@ def show_single_post(request, post_id):
             post.post = single_post
             post.author = request.user
             post.save()
-        return redirect('blog:show_single_post', post_id=post_id)
+        return redirect('blog:show_single_post')
     else:
         form = CommentForm
 
@@ -96,4 +97,17 @@ def del_comment(request,comment_id):
 
     return redirect("blog:show_single_post", post_id=comment.post.pk)
 
+#для поиска используется бибилиотека Q sql3
+def search(request):
+    userinput = request.POST.get('search')
+    query = Q(title__icontains=userinput) | Q(text__icontains=userinput)
+    search_result = Posts.objects.filter(query, published=True)
 
+    # search_result = paginator_page(request,search_result,1)  # Не работает...при переходе не передается значение поиска.
+ 
+    content = {
+        'search_result': search_result,
+        'userinput': userinput,
+    }
+
+    return render(request, 'blog/search_page.html', content)

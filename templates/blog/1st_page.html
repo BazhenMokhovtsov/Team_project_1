@@ -16,8 +16,8 @@
         {% for item in page_obj %}
             <hr>
                 <a href="{% url 'blog:show_single_post' item.pk %}"><h2>{{ item.title }}</h2></a>
-                <h4>{{item.summary}}...</h4>
-                <a><i>Новость опубликовал пользователь: {{item.author}}. Дата публикации {{item.update_date}}</i></a>
+                <h4>{{ item.summary }}...</h4>
+                <a><i>Новость опубликовал пользователь: {{ item.author }}. Дата публикации {{ item.update_date }}</i></a>
         {% endfor %}
     </div>   
     <!-- Элементы навигации пагинации -->

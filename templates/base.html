@@ -26,11 +26,18 @@
                     <a class="nav-link" href="{% url "blog:show_posts_to_category" category.pk %}"> {{category.title}} <span class="sr-only">(текущая)</span></a>
                 </li>
             {% endfor %}
-            <li class="nav-item">
-                <a class="nav-link" href="#">Контакты</a>
+            <li class="nav-item active ">
+                <a class="nav-link" href="{% url "userprofile:user_profile" %}">Личный кабинет</a>
             </li>
             <li class="nav-item active ">
-                <a class="nav-link" href="{% url "userprofile:user_login" %}">Личный кабинет</a>
+                <a class="nav-link" href="{% url "userprofile:user_login" %}">Логин</a>
+            </li>
+            <li>
+                <form method="POST" action='{% url "blog:search" %}'>
+                    {% csrf_token %}
+                    <input type="search" name='search'>
+                    <input type="submit" value='Поиск'>
+                </form>
             </li>
         </ul>
     </div>

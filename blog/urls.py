@@ -10,5 +10,6 @@ urlpatterns = [
     path('category/<int:category_id>', views.show_posts_to_category, name = 'show_posts_to_category'),
     path('single_post/<int:post_id>',views.show_single_post, name='show_single_post'),
     path('del_comment/<int:comment_id>', views.del_comment, name="del_comment"),
+    path('search/', views.search, name='search'),
     
 ]

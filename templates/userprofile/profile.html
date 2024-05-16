@@ -1,11 +1,27 @@
 {% extends "base.html" %}
 
-{% block title %}Log-in{% endblock %}
+{% block title %}Кабинет пользователя{% endblock %}
 
 
 {% block content %}
-    <h1>Welcome to you profile!!!</h1>
-    {% block login %}
-    {% endblock login %}
+    <h1>Welcome to you profile {{user.userprofile.first_name}}!!!</h1>
+    <hr>
+    <h4>Посты пользователя:</h4>
+    <br>
+        {% for post in user_posts %}
+            <a href="{% url 'blog:show_single_post' post.pk %}"><p>{{ post.title }}</p></a>
+            <button class="btn btn-danger custom-btn btn-sm" onclick="location.href='{% url 'userprofile:del_post' post.pk %}'">Удалить Пост</button>
+            <a href="{% url 'userprofile:edit_post' post.pk %}" class="btn btn-primary custom-btn btn-sm">Редактировать</a>
+        {% endfor %}
+    <hr>
+    <h4>добавить новость</h4>
+    <div>
+        <form method="POST" class="post-form">
+            {% csrf_token %}
+            {{ post_form.as_p }}
+            <button type="submit" class="btn btn-success ">Save</button>
+        </form>
+    </div>
+
 
 {% endblock content %}

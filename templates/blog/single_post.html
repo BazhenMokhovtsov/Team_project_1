@@ -10,6 +10,11 @@
         <br>
         <div>
             <p>{{single_post.text}}/<p>
+                {% if single_post.image %}
+                    <img src="{{ single_post.image.url}}" alt="hfghgf">
+                {% endif %}
+                <button class="btn btn-danger custom-btn btn-sm" onclick="location.href='{% url 'userprofile:del_post' single_post.pk %}'">Удалить Пост</button>
+                <a href="{% url 'userprofile:edit_post' single_post.pk %}" class="btn btn-primary custom-btn btn-sm">Редактировать</a>
         </div>
         <br>
         <a><i> Новость опубликовал пользователь: {{single_post.author}}. Дата публикации {{single_post.update_date}}  </i></a>
@@ -21,6 +26,7 @@
             {{ form.as_p }}
             <button type="submit" class="btn btn-success ">Save</button>
         </form>
+
     </div>
     
     <div>
