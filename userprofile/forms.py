@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from blog.models import Posts
+from blog.models import Post
 
 
 class LoginForm(forms.Form):
@@ -25,5 +25,5 @@ class UserRegisterForm(forms.ModelForm):
     
 class PostForm(forms.ModelForm):
     class Meta:
-        model = Posts
-        fields = ('category','title', 'text', 'published')
+        model = Post
+        fields = ('category','title', 'text', 'published', 'image')

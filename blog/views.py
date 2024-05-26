@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Category, Posts, Comments
+from .models import Post, Comment, Category
 from .forms import CommentForm, SortPostForm
 from django.core.paginator import Paginator
 from django.db.models import Q
@@ -12,64 +12,70 @@ def paginator_page(request, queryset, pages):
     page_obj = paginator.get_page(page_number)
     return page_obj
     
+def sorting_by(request, queryset):
+    # # if sort_by:
+    # #     sort_by = request.session.get('sort') #тут находятся данные которые мы передаои в форму под ключем сорт Но в теории при первом посещении тут нету значения
+    # # else:
+    # #     request.session['sort'] = 'update_data'
 
-def show_all_categories(request):
-    categories = Category.objects.all()  # 
-    #posts = Posts.objects.all() много лишних переменных. можно сделать все действия с одной переменной.
+    # # if request.session.get('sort') == None:
+    # #     sort_by = 'update_data'
+    # # почему если использовать request.session['sort']  выдаёт ошибку при первом переходе на стр. а при гет сорт нет ? в квадратных скобках мы пытаемся напрямую получить значение ключа. а в гет мы как-бы запрашиваем его.
+    # # print(f'{sort_by} sort_by')
 
-    if request.method =='POST':
+    sort_by = request.session.get('sort')
+
+    if request.method == 'POST':
         sort_form = SortPostForm(request.POST)
         if sort_form.is_valid():
             sort_by = sort_form.cleaned_data['sort_by']
-            if sort_by == 'update_date':
-                sorted_posts = Posts.objects.order_by('update_date')
-            elif sort_by == 'category':
-                sorted_posts = Posts.objects.order_by('category_id')
-            else:
-                sorted_posts = Posts.objects.filter(published=True)
-    
-            posts = sorted_posts # тут крылась ошибка. На этой строке должна быть сортировка.
-            page_obj = paginator_page(request,posts,2)
-        
-            content = {
-                'sort_form': sort_form,
-                'sorted_posts': sorted_posts,
-                'page_obj': page_obj,
-            }
-
-            return render(request, 'blog/1st_page.html', content)
+            request.session['sort'] = sort_by 
     else:
-        sort_form = SortPostForm()
+        sort_form = SortPostForm(initial={'sort_by': sort_by})
 
-    posts = Posts.objects.filter(published=True) 
-    page_obj = paginator_page(request,posts,2)
+    if sort_by == 'update_date':
+        queryset = queryset.order_by('update_date')
+    elif sort_by == 'category':
+        queryset = queryset.order_by('category_id')
+    elif sort_by == 'title':
+        queryset = queryset.order_by('title')
+    else:
+        queryset
+        
+    return queryset, sort_form
 
-    content = {
-            'sort_form': sort_form,
-            'categories': categories,
-            'page_obj': page_obj,
-        }
+def show_all_categories(request):
+    sorted_posts = Post.objects.filter(published=True)
+    sorted_posts,sort_form = sorting_by(request, sorted_posts)
+
+    page_obj = paginator_page(request, sorted_posts, 2)
     
+    content = {
+        'sort_form': sort_form,
+        'page_obj': page_obj,
+    }
+
     return render(request, 'blog/1st_page.html', content)
 
 
-def show_posts_to_category(request, category_id): 
-    posts = Posts.objects.filter(category__id=category_id, published=True)
+def show_posts_to_category(request, category_id):
+    posts = Post.objects.filter(category__id=category_id, published=True)
+    posts, sort_form = sorting_by(request,posts)
 
-    page_obj = paginator_page(request,posts,2)
+    posts = paginator_page(request,posts,2)
 
     content = {
 
         "posts": posts,
-        "page_obj": page_obj,
+        "sort_form": sort_form,
     }
 
     return render(request, 'blog/category_posts.html', content)
 
 
 def show_single_post(request, post_id):
-    single_post = Posts.objects.get(pk=post_id)
-    comments = Comments.objects.filter(post__id=post_id)
+    single_post = Post.objects.get(pk=post_id)
+    comments = Comment.objects.filter(post__id=post_id)
 
     if request.method == "POST":
         form = CommentForm(request.POST)
@@ -78,9 +84,9 @@ def show_single_post(request, post_id):
             post.post = single_post
             post.author = request.user
             post.save()
-        return redirect('blog:show_single_post')
+        return redirect('blog:show_single_post', post_id=post_id)
     else:
-        form = CommentForm
+        form = CommentForm()
 
     content = {
         "form": form,
@@ -92,19 +98,24 @@ def show_single_post(request, post_id):
 
 
 def del_comment(request,comment_id):
-    comment = Comments.objects.get(pk = comment_id)
+    comment = Comment.objects.get(pk = comment_id)
     comment.delete()
 
     return redirect("blog:show_single_post", post_id=comment.post.pk)
 
 #для поиска используется бибилиотека Q sql3
 def search(request):
-    userinput = request.POST.get('search')
-    query = Q(title__icontains=userinput) | Q(text__icontains=userinput)
-    search_result = Posts.objects.filter(query, published=True)
+    if request.method == 'POST':
+        userinput = request.POST.get('search')
+        request.session['search_data'] = userinput
+    else:
+        userinput = request.session.get('search_data')
 
-    # search_result = paginator_page(request,search_result,1)  # Не работает...при переходе не передается значение поиска.
- 
+    query = Q(title__icontains=userinput) | Q(text__icontains=userinput)
+    search_result = Post.objects.filter(query, published=True)
+
+    search_result = paginator_page(request,search_result,1)  # Не работл...при переходе не передается значение поиска без использования сессии для сохранения данных поиска
+
     content = {
         'search_result': search_result,
         'userinput': userinput,

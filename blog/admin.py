@@ -7,8 +7,8 @@ class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
 
-@admin.register(Posts)
-class PostsAdmin(admin.ModelAdmin):
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
     list_display = ['title', 'author']
     list_filter = ['update_date']
     search_fields = ['category']
@@ -16,8 +16,8 @@ class PostsAdmin(admin.ModelAdmin):
 
 
     
-@admin.register(Comments)
-class CommentsAdmin(admin.ModelAdmin):
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
     list_display = ['author', 'post']
     list_filter = ['created_date']
     search_fields = ['post']

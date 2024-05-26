@@ -20,7 +20,7 @@ class Category(models.Model):
         super().save()
 
     
-class Posts(models.Model):
+class Post(models.Model):
     text = models.TextField(verbose_name="Текст")
     summary = models.CharField(max_length=200, blank=True)
     title = models.CharField(verbose_name="Заголовок", max_length=255)
@@ -46,7 +46,7 @@ class Posts(models.Model):
         self.summary = self.text[:200]
         self.slug = slugify(self.title)
         super().save(*args, **kwargs)
-        super(Posts, self).save(*args, **kwargs)
+        super(Post, self).save(*args, **kwargs)
         if self.image:
             img = Image.open(self.image.path)
             if img.height > 300 or img.width > 300:
@@ -55,9 +55,9 @@ class Posts(models.Model):
                 img.save(self.image.path)
 
     
-class Comments(models.Model):
+class Comment(models.Model):
     author = models.ForeignKey(User, verbose_name="Автор", on_delete=models.CASCADE)
-    post = models.ForeignKey(Posts, verbose_name="Пост/Новость", on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, verbose_name="Пост/Новость", on_delete=models.CASCADE)
     text = models.TextField(verbose_name="Текст")
     created_date = models.DateTimeField(verbose_name="Дата добавления коментария", auto_now_add=True)
 
@@ -65,7 +65,9 @@ class Comments(models.Model):
         return self.author.username
     
     class Meta:
-         verbose_name = "Коментарий"
-         verbose_name_plural = "Коментарии"
+        verbose_name = "Коментарий"
+        verbose_name_plural = "Коментарии"
+        ordering = ['-created_date']
+        indexes = [ models.Index(fields=['created_date'])]
 
     

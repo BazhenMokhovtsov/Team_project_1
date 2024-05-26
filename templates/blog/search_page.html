@@ -2,7 +2,13 @@
 {% block content %}
 <h1>По вашему запросу "{{userinput}}" найденны следующие записи: </h1>
 <hr>
-
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{ sort_form.as_p }}
+        <input type="submit" value="Сортировать">
+    </form>
+</div>
 <div>
     {% for result in search_result %}
     <a href="{% url "blog:show_single_post" result.pk %}"><h4>{{result.title}}</h4></a>

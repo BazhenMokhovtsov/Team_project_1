@@ -16,7 +16,7 @@
     <hr>
     <h4>добавить новость</h4>
     <div>
-        <form method="POST" class="post-form">
+        <form method="POST" class="post-form" enctype="multipart/form-data">
             {% csrf_token %}
             {{ post_form.as_p }}
             <button type="submit" class="btn btn-success ">Save</button>

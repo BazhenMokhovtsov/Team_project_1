@@ -1,0 +1,1341 @@
+
+
+
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-04-30T08:42:37.568Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "None",
+    "object_repr": "Концерты",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-04-30T08:44:59.080Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Мероприятия",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-04-30T08:46:23.750Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Новости",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-04-30T12:33:51.149Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Елена Сарни о русской культуре",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-04-30T12:35:36.651Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Умер гитарист Робин Джордж, работавший с Гленном Хьюзом и Робертом Плантом",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-04-30T18:35:50.242Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Елена Сарни о русской культуре",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-04-30T18:36:59.089Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Басков назвал предпочтительную для себя модель отношений",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-04-30T18:37:20.701Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Умер гитарист Робин Джордж, работавший с Гленном Хьюзом и Робертом Плантом",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-04-30T19:37:24.964Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Елена Сарни о русской культуре",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043a\\u0441\\u0442\", \"Summary\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-05-01T19:09:07.183Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "AdminB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-05-01T20:45:05.057Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Выступление Нетребко в Швейцарии отменено из-за конференции по Украине",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-05-04T17:36:49.379Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Дворцы Санкт-Петербурга 2024: участники фестиваля, билеты, даты и места проведения",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-05-04T17:38:23.187Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "СМИ сообщили о планируемом в 2025 году туре Linkin Park",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-05-04T21:55:36.629Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "Test",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2024-05-11T15:05:16.653Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "Test1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2024-05-11T15:05:16.660Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "4",
+    "object_repr": "Test2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2024-05-11T15:21:57.450Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "Test1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2024-05-11T15:22:59.594Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "Test1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2024-05-14T09:08:35.370Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "СМИ сообщили о планируемом в 2025 году туре Linkin Park",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2024-05-14T09:10:35.698Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "СМИ сообщили о планируемом в 2025 году туре Linkin Park",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2024-05-14T09:10:41.373Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "СМИ сообщили о планируемом в 2025 году туре Linkin Park",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2024-05-14T09:21:05.867Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "СМИ сообщили о планируемом в 2025 году туре Linkin Park",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2024-05-14T09:21:12.804Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "СМИ сообщили о планируемом в 2025 году туре Linkin Park",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2024-05-14T09:24:00.484Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "СМИ сообщили о планируемом в 2025 году туре Linkin Park",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2024-05-14T09:24:06.058Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "СМИ сообщили о планируемом в 2025 году туре Linkin Park",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2024-05-14T09:40:33.816Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "СМИ сообщили о планируемом в 2025 году туре Linkin Park",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2024-05-14T09:40:39.678Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "СМИ сообщили о планируемом в 2025 году туре Linkin Park",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2024-05-14T09:41:03.923Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "СМИ сообщили о планируемом в 2025 году туре Linkin Park",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2024-05-14T09:41:08.736Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "СМИ сообщили о планируемом в 2025 году туре Linkin Park",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2024-05-14T15:10:27.976Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Бажен Моховцов",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2024-05-16T11:11:14.405Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Выступление Нетребко в Швейцарии отменено из-за конференции по Украине",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0443\\u0431\\u043b\\u0438\\u043a\\u0430\\u0446\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2024-05-16T11:11:18.285Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Дворцы Санкт-Петербурга 2024: участники фестиваля, билеты, даты и места проведения",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"\\u041f\\u0443\\u0431\\u043b\\u0438\\u043a\\u0430\\u0446\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2024-05-16T11:11:21.603Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Становлением Веб-програмистом!",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0443\\u0431\\u043b\\u0438\\u043a\\u0430\\u0446\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2024-05-16T11:11:30.095Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "СМИ сообщили о планируемом в 2025 году туре Linkin Park",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2024-05-16T11:11:33.323Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Елена Сарни о русской культуре",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2024-05-16T11:11:36.665Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Умер гитарист Робин Джордж, работавший с Гленном Хьюзом и Робертом Плантом",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"\\u041f\\u0443\\u0431\\u043b\\u0438\\u043a\\u0430\\u0446\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2024-05-16T11:11:38.945Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Басков назвал предпочтительную для себя модель отношений",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Summary\", \"\\u041f\\u0443\\u0431\\u043b\\u0438\\u043a\\u0430\\u0446\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2024-05-16T11:12:22.960Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Становлением Веб-програмистом!",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0443\\u0431\\u043b\\u0438\\u043a\\u0430\\u0446\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2024-05-16T13:52:12.288Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "Я новый пользователь!",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Категория",
+    "content_type": 7,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Категория",
+    "content_type": 7,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Категория",
+    "content_type": 7,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view Категория",
+    "content_type": 7,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Профайл пользователя",
+    "content_type": 8,
+    "codename": "add_userprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Профайл пользователя",
+    "content_type": 8,
+    "codename": "change_userprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Профайл пользователя",
+    "content_type": 8,
+    "codename": "delete_userprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Профайл пользователя",
+    "content_type": 8,
+    "codename": "view_userprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add Пост/Новость",
+    "content_type": 9,
+    "codename": "add_posts"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change Пост/Новость",
+    "content_type": 9,
+    "codename": "change_posts"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete Пост/Новость",
+    "content_type": 9,
+    "codename": "delete_posts"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view Пост/Новость",
+    "content_type": 9,
+    "codename": "view_posts"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add Коментарий",
+    "content_type": 10,
+    "codename": "add_comments"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change Коментарий",
+    "content_type": 10,
+    "codename": "change_comments"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete Коментарий",
+    "content_type": 10,
+    "codename": "delete_comments"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view Коментарий",
+    "content_type": 10,
+    "codename": "view_comments"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add Профайл пользователя",
+    "content_type": 11,
+    "codename": "add_userprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change Профайл пользователя",
+    "content_type": 11,
+    "codename": "change_userprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete Профайл пользователя",
+    "content_type": 11,
+    "codename": "delete_userprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view Профайл пользователя",
+    "content_type": 11,
+    "codename": "view_userprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add Пост/Новость",
+    "content_type": 12,
+    "codename": "add_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change Пост/Новость",
+    "content_type": 12,
+    "codename": "change_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete Пост/Новость",
+    "content_type": 12,
+    "codename": "delete_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view Пост/Новость",
+    "content_type": 12,
+    "codename": "view_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add Коментарий",
+    "content_type": 13,
+    "codename": "add_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change Коментарий",
+    "content_type": 13,
+    "codename": "change_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete Коментарий",
+    "content_type": 13,
+    "codename": "delete_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view Коментарий",
+    "content_type": 13,
+    "codename": "view_comment"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$RiYi2Y8qvUlFbX0Te8JTTV$I5JHWNSOqALwxhpKOKIs+I3N1opfw8q7y5aWvKcZY/U=",
+    "last_login": "2024-05-15T08:06:01.231Z",
+    "is_superuser": true,
+    "username": "AdminB",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-04-30T08:42:19.701Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$GUzZ2JoyIkjfIB4wMA9uAJ$CG70O2S0U1SplJhzWji2WmtkZn0rhiBkDf4oMnhaNyo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Test",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-05-04T21:55:36.288Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$NFZfkmKoCrUFwGdYyeOu1p$kQARY5isDaBQfm6ICvO0DwRXUtJIsMCWJx6Gx3wDJq8=",
+    "last_login": "2024-05-15T08:05:20.550Z",
+    "is_superuser": false,
+    "username": "Test1",
+    "first_name": "Test1",
+    "last_name": "",
+    "email": "Test@test.test",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-05-11T15:23:06.752Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "blog",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "blog",
+    "model": "userprofile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "blog",
+    "model": "posts"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "blog",
+    "model": "comments"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "userprofile",
+    "model": "userprofile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "blog",
+    "model": "post"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "blog",
+    "model": "comment"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "jba7ph8xhuccn7s3l01wf1zueuhsnzcp",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAURP-FtSHl0Qt16d4_MCHAvZWqaSOUhTH-uzTpQhezmTlz3sz5uiZXC2U3ITsywQ6_XfDxTvM24M3P14XHZV7zFPiG8H0t_LwgPU47-ydIvqT2DoK0AZQwBMBgR1RGqT5GbaU3SlhFYUDqBi1gRNsiDagu9mA6ACWgSQv5HJN7VsqvZrzUTgvJPl9s3D64:1s7Yp1:pBglwytZ_tpYCUo0yYalJZ_fdESQzHLBZC6h3codDbU",
+    "expire_date": "2024-05-30T10:58:51.268Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ku6yv9nokd1gg0a310m0gmkyyei3iwgk",
+  "fields": {
+    "session_data": ".eJxVjM0OwiAQhN-FsyFFys969O4zkF0WpGogKe3J-O62SQ96mmS-b-YtAq5LCWtPc5hYXIQTp9-OMD5T3QE_sN6bjK0u80RyV-RBu7w1Tq_r4f4dFOxlWw88sMuOCbw_g2enIRNFnxSYTAay1ZmsBWVt3DLaUWlEY0bMHhOw-HwB9JI4ZA:1s5oZE:G2Y1lfmHZQqcm4nhUCaPwd_7-xtwuhWZcRCYp5NfhRU",
+    "expire_date": "2024-05-25T15:23:20.643Z"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 1,
+  "fields": {
+    "title": "Мероприятия",
+    "slug": "meropriyatiya"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 2,
+  "fields": {
+    "title": "Новости",
+    "slug": "novosti"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 1,
+  "fields": {
+    "text": "Сегодня мы находимся в критическом, кризисном для современного искусства периоде. Кроме исчерпанности стилей и отсутствия по-настоящему новаторских идей можно заметить разделение подходов западных и российских художников к пониманию целей и смысла культуры. Западная культура ориентируется на понятии мультикультурализма, что означает горизонтальное, ложное уравнивание различных элементов культуры, например, таких, как поэзия и рэп, классическая музыка и игра на тамтаме.\r\nРусская культура в целом строится на пирамидальной иерархии ценностей, в которой художники подходят к своей работе как к поиску истины, высших ценностей бытия.\r\nВ этой передаче мы сравним западное и русское искусство. Поговорим о том, как нам навязываются западные культурные ценности. Обсудим, какие задачи ставит перед собой русская культура. И, наконец, Елена Сарни поделится своим прогнозом о том, как современное искусство будет выходить из этого кризиса.",
+    "summary": "Сегодня мы находимся в критическом, кризисном для современного искусства периоде. Кроме исчерпанности стилей и отсутствия по-настоящему новаторских идей можно заметить разделение подходов западных и р",
+    "title": "Елена Сарни о русской культуре",
+    "author": 1,
+    "update_date": "2024-05-16T13:27:55.759Z",
+    "create_date": "2024-05-16T13:27:55.752Z",
+    "published": true,
+    "category": 2,
+    "image": "",
+    "slug": "elena-sarni-o-russkoj-kulture"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 2,
+  "fields": {
+    "text": "Британский гитарист и продюсер Робин Джордж скончался в возрасте 68 лет. Он обрел известность в 1980-х, когда работал с такими рок-музыкантами, как Фил Лайнотт, Гленн Хьюз, Роберт Плант и другими.\r\n\r\nСмерть наступила 26 апреля после продолжительной болезни, передает Classic Rock со ссылкой на соцсети Робина Джорджа.\r\n\r\n«Наш прекрасный Робин покинул этот мир и улетел в следующую жизнь, где, мы надеемся, он тусуется с семьей, друзьями и музыкантами, которых он любил и потерял за эти годы. Робин долго боролся с болезнью, но к Рождеству стало очевидно, что в этом мире ему осталось недолго», — сказано в сообщении.\r\n\r\nСвой дебютный EP «History» Джордж представил в 1983 году. Наибольшую известность музыканту принес первый полноформатник Dangerous Music 1984 года, в записи которого участвовали клавишник Марк Стенвей из рок-группы Magnum, Пино Палладино (будущий басист The Who и Nine Inch Nails), барабанщик Judas Priest Дейв Холланд и лидер коллектива Thin Lizzy Фил Лайнотт.\r\n\r\nПозднее Джордж играл с экс-фронтменом Uriah Heep Дэвидом Байроном в группе Byron Band, а также с Роем Вудом, The Climax Blues Band, Magnum и другими командами. Кроме того, в 1989 году гитарист записал с Гленном Хьюзом альбом Sweet Relief, который оставался неизданным до 2008-го.\r\n\r\nПродюсерская деятельность Джорджа включала в себя, например, песню Red for Danger из компиляции Роберта Планта Sixty Six To Timbuktu (2003), которая охватывала хиты бывшего лидера Led Zeppelin на протяжении всей его карьеры.",
+    "summary": "Британский гитарист и продюсер Робин Джордж скончался в возрасте 68 лет. Он обрел известность в 1980-х, когда работал с такими рок-музыкантами, как Фил Лайнотт, Гленн Хьюз, Роберт Плант и другими.\r\n\r\n",
+    "title": "Умер гитарист Робин Джордж, работавший с Гленном Хьюзом и Робертом Плантом",
+    "author": 1,
+    "update_date": "2024-05-16T13:27:55.747Z",
+    "create_date": "2024-05-16T13:27:55.740Z",
+    "published": true,
+    "category": 2,
+    "image": "",
+    "slug": "umer-gitarist-robin-dzhordzh-rabotavshij-s-glennom-hyuzom-i-robertom-plantom"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 3,
+  "fields": {
+    "text": "Народный артист России Николай Басков назвал предпочтительную для себя модель отношений. По его словам, он склоняется к гостевому браку. Об этом пишет «Пятый канал».\r\n\r\n«Разве это плохо? А как все делить потом?» — задался вопросом Басков в эфире федерального телевидения.\r\n\r\nГоворя о предпочтительном возрасте возможной избранницы, певец признался, что ему нравятся зрелые личности, для него важнее интеллект, чем внешний вид. «Ну, 20-летних я уже не потяну. От 28 и дальше», — сказал 47-летний исполнитель, добавив, что открыт для отношений и готов познавать и себя, и мир.\r\n\r\nРанее Николая Баскова заметили на публике с обручальным кольцом по цене квартиры в Москве. Сам певец похвастался тем, что он пользуется успехом у женщин. Он назвал себя молодым, красивым и состоятельным, добавив, что у него нет проблем с женским вниманием.",
+    "summary": "Народный артист России Николай Басков назвал предпочтительную для себя модель отношений. По его словам, он склоняется к гостевому браку. Об этом пишет «Пятый канал».\r\n\r\n«Разве это плохо? А как все дел",
+    "title": "Басков назвал предпочтительную для себя модель отношений",
+    "author": 1,
+    "update_date": "2024-05-16T13:27:55.735Z",
+    "create_date": "2024-05-16T13:27:55.728Z",
+    "published": true,
+    "category": 2,
+    "image": "",
+    "slug": "baskov-nazval-predpochtitelnuyu-dlya-sebya-model-otnoshenij"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 4,
+  "fields": {
+    "text": "МОСКВА, 1 мая/ Радио Sputnik. Выступление российской оперной певицы Анны Нетребко, запланированное на 1 июня в швейцарском Люцерне, отменили по просьбе властей на фоне предстоящей мирной конференции по Украине, сообщили в Центре культуры и конгрессов Люцерна (KKL), где должен был пройти концерт.\r\n«\r\n\"KKL Люцерна не предоставит площадку для концерта Анны Нетребко 1 июня 2024 года. Общественное восприятие солистки остается противоречивым. Ввиду географической и временной близости выступления госпожи Нетребко к мирной конференции по Украине следовало ожидать угрозы общественному порядку. По этой причине кантональные и городские власти попросили KKL Люцерна отменить концерт\", – приводит РИА Новости фрагмент сообщения представителей концертной площадки.\r\nШвейцария проведет 15–16 июня мирную конференцию по Украине недалеко от города Люцерн. Россия в ней участвовать не будет.",
+    "summary": "МОСКВА, 1 мая/ Радио Sputnik. Выступление российской оперной певицы Анны Нетребко, запланированное на 1 июня в швейцарском Люцерне, отменили по просьбе властей на фоне предстоящей мирной конференции п",
+    "title": "Выступление Нетребко в Швейцарии отменено из-за конференции по Украине",
+    "author": 1,
+    "update_date": "2024-05-16T13:27:55.826Z",
+    "create_date": "2024-05-16T13:27:55.820Z",
+    "published": true,
+    "category": 2,
+    "image": "",
+    "slug": "vyistuplenie-netrebko-v-shvejtsarii-otmeneno-iz-za-konferentsii-po-ukraine"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 5,
+  "fields": {
+    "text": "Дворцы Санкт-Петербурга 2024\r\nВ этом материале ALLFEST.RU вам расскажет о том, где пройдёт, датах и месте проведения, а также познакомим с программой фестиваля и расскажем как добраться до площадки мероприятия.\r\n\r\nТакже вы узнаете о цене, стоимости и местах продажи билетов, кто выступит из артистов, какой лайн-ап и состав участников, расписании выступлений.\r\n\r\nМесто проведения\r\nГде пройдёт мероприятие? Место проведения фестиваля Дворцы Санкт-Петербурга 2024 – город Санкт-Петербург, разные локации, смотрите расписание.\r\n\r\nДата проведения\r\nКогда пройдёт мероприятие? Даты проведения ежегодного фестиваля Дворцы Санкт-Петербурга 2024, который состоится в Северной столицы - с 22 января до 31 декабря.\r\n\r\nОставайтесь в курсе фестивальной жизни! Подпишитесь на наш канал в Telegram и сообщество в ВКонтакте!\r\n\r\nИнформация о билетах, цене и доступе на мероприятие\r\nИнформацию о стоимости билетов на фестиваль Дворцы Санкт-Петербурга 2024 вы можете найти по ссылке ниже на нашем сайте ALLFEST.RU.",
+    "summary": "Дворцы Санкт-Петербурга 2024\r\nВ этом материале ALLFEST.RU вам расскажет о том, где пройдёт, датах и месте проведения, а также познакомим с программой фестиваля и расскажем как добраться до площадки ме",
+    "title": "Дворцы Санкт-Петербурга 2024: участники фестиваля, билеты, даты и места проведения",
+    "author": 1,
+    "update_date": "2024-05-16T13:27:55.816Z",
+    "create_date": "2024-05-16T13:27:55.811Z",
+    "published": true,
+    "category": 1,
+    "image": "",
+    "slug": "dvortsyi-sankt-peterburga-2024-uchastniki-festivalya-biletyi-datyi-i-mesta-provedeniya"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 6,
+  "fields": {
+    "text": "Издание Billboard утверждает, что культовая группа Linkin Park, прекратившая концертную деятельность в 2017-м после самоубийства вокалиста Честер Беннингтон, планирует провести тур в 2025 году.\r\n\r\nИсточники сообщают, что агентство по бронированию билетов WME уже начало приём заявок от заинтересованных площадок, а в концертах задействуют вокалистку — в помощь второму певцу коллектива Майку Шиноде.\r\n\r\nХодили слухи, что в тур с Linkin Park отправится фронтвумен Evanescence Эми Ли, однако в конце апреля она опровергла данную информацию, попутно отметив, что рассмотрела бы подобное предложение, будь оно реальным.\r\n\r\nНапомним, что в апреле группа выпустила сборник синглов с ранее неизданными треками.",
+    "summary": "Издание Billboard утверждает, что культовая группа Linkin Park, прекратившая концертную деятельность в 2017-м после самоубийства вокалиста Честер Беннингтон, планирует провести тур в 2025 году.\r\n\r\nИст",
+    "title": "СМИ сообщили о планируемом в 2025 году туре Linkin Park",
+    "author": 1,
+    "update_date": "2024-05-16T13:27:55.770Z",
+    "create_date": "2024-05-16T13:27:55.764Z",
+    "published": true,
+    "category": 2,
+    "image": "blog/2024/05/14/images_2BqWn8o.jpeg",
+    "slug": "smi-soobschili-o-planiruemom-v-2025-godu-ture-linkin-park"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 9,
+  "fields": {
+    "text": "Я точно осилю этот путь =))) чего и всем желаю!",
+    "summary": "Я точно осилю этот путь =))) чего и всем желаю!",
+    "title": "Становлением Веб-програмистом!",
+    "author": 1,
+    "update_date": "2024-05-16T13:27:55.724Z",
+    "create_date": "2024-05-16T13:27:55.706Z",
+    "published": false,
+    "category": 1,
+    "image": "",
+    "slug": "stanovleniem-veb-programistom"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 16,
+  "fields": {
+    "text": "Текст неопубликованного поста",
+    "summary": "Текст неопубликованного поста",
+    "title": "Неопубликованный пост",
+    "author": 1,
+    "update_date": "2024-05-16T13:55:09.065Z",
+    "create_date": "2024-05-16T13:55:09.049Z",
+    "published": false,
+    "category": 1,
+    "image": "",
+    "slug": "neopublikovannyij-post"
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 1,
+  "fields": {
+    "author": 1,
+    "post": 1,
+    "text": "И вот он! первый пост которого вы все так ждали...",
+    "created_date": "2024-05-01T19:09:07.181Z"
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 18,
+  "fields": {
+    "author": 1,
+    "post": 3,
+    "text": "Ну, мои поздравления Коле...",
+    "created_date": "2024-05-01T20:28:58.814Z"
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 20,
+  "fields": {
+    "author": 1,
+    "post": 4,
+    "text": "Какой канфуз...",
+    "created_date": "2024-05-01T20:45:26.966Z"
+  }
+},
+{
+  "model": "userprofile.userprofile",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "first_name": "Бажен",
+    "last_name": "Моховцов",
+    "birth_date": "1994-06-02",
+    "city": "Бад Виндсхайм",
+    "e_mail": "шашалала@lala.com",
+    "avatar": ""
+  }
+}
+]

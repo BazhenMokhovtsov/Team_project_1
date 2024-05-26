@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
-{% for i in categories %}
+
     {% block title %} Категории {% endblock title %}
-{% endfor %}
+
 
 {% block content %}
     <div>
         <form method="post">
             {% csrf_token %}
             {{ sort_form.as_p }}
-            <input type="submit" value="Sort">
+            <input type="submit" value="Сортировать">
         </form>
     </div>
     <div> 
