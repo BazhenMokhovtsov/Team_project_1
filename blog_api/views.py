@@ -2,7 +2,7 @@ from rest_framework import generics, views, status
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAdminUser
 from rest_framework.response import Response
 
-from blog.models import Category, Posts, Comments
+from blog.models import Category, Post, Comment
 from .serializers import CategorySerializer, PostSerializer
 
 
@@ -25,18 +25,18 @@ class CategoryCreate(generics.ListCreateAPIView):
 
 
 class PostAPIList(generics.ListAPIView):
-    queryset = Posts.objects.all()
+    queryset = Post.objects.all()
     serializer_class = PostSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
 
 
 class PostAPIDetail(generics.RetrieveAPIView):
-    queryset = Posts.objects.all()
+    queryset = Post.objects.all()
     serializer_class = PostSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
 
 
 class PostAPICreate(generics.ListCreateAPIView):
-    queryset = Posts.objects.all()
+    queryset = Post.objects.all()
     serializer_class = PostSerializer
     permission_classes = [IsAdminUser]

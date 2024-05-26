@@ -1,17 +1,18 @@
 from django import forms
-from .models import Comments
+from .models import Comment
 
 class CommentForm(forms.ModelForm):
 
     class Meta:
-        model = Comments
-        fields = ['text']  # Включить только указанные поля
+        model = Comment
+        fields = ['text'] 
 
 
 class SortPostForm(forms.Form):
     sort_choices = [
-        ('update_data','По дате обновления'),
-        ('category', 'По категории')
+        ('update_data', 'По дате обновления'),
+        ('category', 'По категории'),
+        ('title', 'По заголовку')
     ]
 
     sort_by = forms.ChoiceField(choices=sort_choices, label='Сортировка по')

@@ -1,13 +1,23 @@
 {% extends "base.html" %}
 
 
-{% block title %} Новости {% endblock title %}
+{% block title %} {{ posts.0.category }} {% endblock title %}
+
 
 
 
 {% block content %}
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{ sort_form.as_p }}
+        <input type="submit" value="Сортировать">
+    </form>
+</div>
+<h1>Вы находитесь в категории: {{ posts.0.category }}</h1>
 <div> 
-    {% for item in page_obj %}
+    {% for item in posts %}
+    
         <hr>
             <a href="{% url 'blog:show_single_post' item.pk %}"><h2>{{ item.title }}</h2></a>
             <h4>{{item.summary}}...</h4>
@@ -18,18 +28,18 @@
 <div class="pagination">
     <span class="step-links">
         <br>
-        {% if page_obj.has_previous %}
+        {% if posts.has_previous %}
             <a href="?page=1">&laquo; первая</a>
-            <a href="?page={{ page_obj.previous_page_number }}">предыдущая</a>
+            <a href="?page={{ posts.previous_page_number }}">предыдущая</a>
         {% endif %}
 
         <span class="current">
-            Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
+            Страница {{ posts.number }} из {{ posts.paginator.num_pages }}.
         </span>
 
-        {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}">следующая</a>
-            <a href="?page={{ page_obj.paginator.num_pages }}">последняя &raquo;</a>
+        {% if posts.has_next %}
+            <a href="?page={{ posts.next_page_number }}">следующая</a>
+            <a href="?page={{ posts.paginator.num_pages }}">последняя &raquo;</a>
         {% endif %}
     </span>
 </div>

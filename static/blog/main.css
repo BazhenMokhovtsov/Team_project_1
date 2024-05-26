@@ -3,6 +3,7 @@ body {
     max-width: 85%;
     word-wrap: break-word; /* Разрывать длинные слова */
     padding: 15%;
+
     
 
 }
@@ -21,3 +22,25 @@ p {
     font-size: 18px; /* Увеличение размера шрифта */
 }
 
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px; /* Расстояние между категориями */
+}
+
+.link {
+    text-decoration: none; /* Убирает подчеркивание ссылок */
+    color: inherit; /* Сохраняет цвет текста */
+}
+
+.link h1 {
+    max-width: 100%;
+    padding: 15px; /* Внутренний отступ, можно изменить по необходимости */
+    background-color: #61a8ac; /* Цвет фона, можно изменить по необходимости */
+    border-radius: 15px; /* Закругленные углы, можно изменить по необходимости */
+    transition: background-color 0.3s; /* Анимация при наведении */
+}
+
+.link h1:hover {
+    background-color: #21cd60; /* Цвет фона при наведении, можно изменить по необходимости */
+}
