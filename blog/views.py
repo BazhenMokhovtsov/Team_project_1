@@ -48,6 +48,7 @@ def show_all_categories(request):
             'sort_form': sort_form,
             'categories': categories,
             'page_obj': page_obj,
+        
         }
     
     return render(request, 'blog/1st_page.html', content)
